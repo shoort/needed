@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>needed</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/needed.js"></script>
+    <script src="/data.js"></script>
+    <script src="/out.js"></script>
+    <script src="/links.js"></script>
+  </head>
+  <body>
+    <b>needed</b><br/><br/>
+    <div class="scroller-parent">
+        <div id="scroller">
+        </div>
+    </div>
+    <div class="sidebar">
+      <b>points</b> <span id="points">0</span><br/><br/>
+      <button>eat a cookie</button>
+    </div>
+    <div class="bottom">
+      <button id="openabout">about</button>
+    </div>
+    <div id="about">
+      <div class="dialog-about">
+        <b>needed</b>
+        <p>
+          You are needed. You are loved. You are worth it, one hundred percent.
+          You don't deserve to suffer. I don't want you to suffer.
+        </p>
+        <p>
+          I just want you to know that.
+        </p>
+        <p>
+          I created <b>needed</b> to show you that life is worth it, that you
+          exist, that you will cope and you will make it through.
+        </p>
+        <button id="closeabout">close</button>
+        <div class="right">
+          <button id="donate">donate</button>
+          <button id="reset">reset</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      needed.start(function () {
+        needed.out.text("hello. do you feel needed?");
+        needed.out.buttons([
+          "yes, i feel needed", "no, i do not feel needed"
+        ], function (choice) {
+          needed.pointsAdd(1);
+        });
+      });
+    </script>
+  </body>
+</html>
